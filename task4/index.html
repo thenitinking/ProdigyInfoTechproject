@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> NITIN KUMAR - Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1d2671, #c33764);
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+    header {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    header h2 span {
+      border-right: 2px solid #fff;
+      animation: typing 4s steps(30, end) infinite, blink .7s infinite;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+    .about p {
+      font-size: 1.1rem;
+      text-align: center;
+      line-height: 1.6;
+    }
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .skill {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 10px;
+      position: relative;
+    }
+    .skill-bar {
+      height: 10px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .skill-bar span {
+      display: block;
+      height: 100%;
+      background: #00ffcc;
+      width: 0;
+      animation: fill 3s forwards;
+    }
+    @keyframes fill {
+      to { width: var(--level); }
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project {
+      perspective: 1000px;
+    }
+    .project-inner {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+    .project:hover .project-inner {
+      transform: rotateY(180deg);
+    }
+    .project-front, .project-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .project-front {
+      background: rgba(255,255,255,0.1);
+      font-size: 1.2rem;
+    }
+    .project-back {
+      background: rgba(0,0,0,0.5);
+      transform: rotateY(180deg);
+      font-size: 0.95rem;
+      text-align: center;
+    }
+    /* Contact Section */
+    .contact-form {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 15px;
+    }
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .contact-form input, .contact-form textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .contact-form button {
+      background: #00ffcc;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .contact-links {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .contact-links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #00ffcc;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="./DSC_8999.JPG" alt="Nitin Kumar" style="width: 200px;height: 200px;border-radius:50%;border:4px solid #fff;margin-bottom:20px;">
+    <h1> Nitin Kumar</h1>
+    <h2><span>Web Developer | Creative Thinker | Problem Solver</span></h2>
+    <h3>Turning ideas into beautiful, functional, and responsive websites 🚀</h3>
+</header>
+
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      I’m Nitin kumar, a passionate web developer who loves bringing ideas to life with clean, efficient, and creative code. 
+      Known for my curiosity and problem-solving mindset, I enjoy turning complex challenges into elegant digital solutions. 
+      Always eager to learn and explore new technologies, I aim to grow into a versatile and innovative developer.
+    </p>
+
+    <div class="about-details" style="margin-top:20px;text-align:center;">
+        <h3 style="color:#00ffcc;">🎓 Education</h3>
+        <p>Bachelor’s in Computer Science (2024 – Present)</p>
+
+        <h3 style="color:#00ffcc;">💼 Experience</h3>
+        <p>1 Month Intern at Prodigy Infotech – Web Development (2025)</p>
+        <p> Intern at C-DAC PATNA  – AI and DS using Python</p>
+    </div>
+</section>
+
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">
+        <h3>HTML</h3>
+        <div class="skill-bar"><span style="--level:90%"></span></div>
+      </div>
+      <div class="skill">
+        <h3>CSS</h3>
+        <div class="skill-bar"><span style="--level:85%"></span></div>
+      </div>
+      <div class="skill">
+        <h3>JavaScript</h3>
+        <div class="skill-bar"><span style="--level:80%"></span></div>
+      </div>
+      <div class="skill">
+        <h3>Responsive Design</h3>
+        <div class="skill-bar"><span style="--level:75%"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <div class="project-inner">
+          <div class="project-front">Landing Page</div>
+              <div class="project-back">Responsive landing page with an interactive navigation bar using HTML, CSS, JS</div>
+          </div>
+          </div>
+      <div class="project">
+        <div class="project-inner">
+          <div class="project-front">Tic-Tac-Toe</div>
+          <div class="project-back">A two-player game with an AI option, smart gameplay, and smooth UI.</div>
+        </div>
+      </div>
+      <div class="project">
+        <div class="project-inner">
+          <div class="project-front">Stopwatch</div>
+          <div class="project-back">A stylish stopwatch app with start, stop, reset, and lap functionality using JavaScript.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>📩 Get in Touch</h2>
+    <div class="contact-form">
+      <form onsubmit="sendMessage(event)">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="contact-links">
+       
+        <a href="https://www.linkedin.com/in/nitin-kumar-0113a9338?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">🔗 LinkedIn</a>
+       <a href="https://github.com/thenitinking" target="_blank">🐙 GitHub</a>
+      </div>
+    </div>
+  </section>
+   
+  <footer>
+    <p><b>NITIN KUMAR<b></b></p>
+  </footer>
+
+  <script>
+    function sendMessage(e){
+      e.preventDefault();
+      alert("Thank you! I’ll get back to you soon.");
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
